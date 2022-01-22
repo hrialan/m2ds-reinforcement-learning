@@ -4,4 +4,4 @@
 
 **Paper analysis :** [Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm](https://arxiv.org/abs//1712.01815)
 
-**Website :** [https://hrialan.github.io/ReinforcementLearning_M2DataScience/](https://hrialan.github.io/ReinforcementLearning_M2DataScience/)
+**Public website :** [https://hrialan.github.io/ReinforcementLearning_M2DataScience/](https://hrialan.github.io/ReinforcementLearning_M2DataScience/)
