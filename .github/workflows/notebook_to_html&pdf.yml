@@ -1,0 +1,35 @@
+name: Jupyter notebook to HTML and PDF format uploaded as artifact
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  nbconvert:
+    runs-on: ubuntu-latest
+    env:
+      ipynb_file_dir  : .
+      ipynb_file_name : main
+      artifact_name   : Project demo notebook
+      
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Convert notebook to other format 
+        run: |
+          sudo apt-get install pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
+          pip install notebook
+          pip install nbconvert
+          cd ${ipynb_file_dir}
+          jupyter nbconvert --to pdf ${ipynb_file_name}.ipynb
+          jupyter nbconvert --to html ${ipynb_file_name}.ipynb
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.artifact_name }} (PDF)
+          path: ${{ env.ipynb_file_name }}.pdf
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.artifact_name }} (HTML)
+          path: ${{ env.ipynb_file_name }}.html
