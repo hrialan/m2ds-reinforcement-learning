@@ -3,6 +3,3 @@
 ---
 Cyril Nérin - Alexandre Perbet - Hugo Rialan
 
-### Research paper analysis :
-- [Final report](Report.pdf)
-- [Demo notebook](demo_notebook.html)
