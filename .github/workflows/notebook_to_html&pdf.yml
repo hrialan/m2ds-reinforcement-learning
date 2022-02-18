@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ipynb_file_dir  : .
-      ipynb_file_name : main
+      ipynb_file_name : demo_notebook
       artifact_name   : Project demo notebook
       
     steps:
